@@ -1,11 +1,10 @@
 export class Task {
   #name;
   #count;
-  #id;
   constructor(name, count = 0) {
     this.#name = name;
     this.#count = count;
-    this.#id = Date.now();
+    this.id = Date.now();
   }
 
   increaseCount() {
