@@ -4,7 +4,7 @@ export class Task {
   constructor(name, count = 0) {
     this.#name = name;
     this.#count = count;
-    this.id = Date.now();
+    this.id = Math.floor(Math.random() * 100000000);
   }
 
   increaseCount() {
@@ -14,6 +14,9 @@ export class Task {
   changeName(name) {
     this.#name = name;
     return this.#name;
+  }
+  get getTaskCount() {
+    return this.#count;
   }
 }
 

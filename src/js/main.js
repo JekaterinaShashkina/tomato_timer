@@ -19,19 +19,17 @@ document
       }
     }
   });
-
-// console.log(task);
-// console.log(task.increaseCount());
-// task.changeName('Продать слона');
-// console.log(task);
-// console.log(task.increaseCount());
 const tomato = new Tomato();
 
 console.log(tomato);
-tomato.addTask(new Task('Купить слона', 5));
+tomato.addTask(new Task('Купить слона', 0));
 tomato.addTask(new Task('Помыть слона', 5));
 tomato.addTask(new Task('Продать слона', 5));
 
-console.log(tomato.tasks[1].id);
-tomato.activateTask(tomato.tasks[1].id);
+console.log(tomato.tasks[0].id);
+tomato.activateTask(tomato.tasks[0].id);
+console.log(tomato);
+// tomato.runTimer();
+tomato.increaseTaskCount(tomato.tasks[1].id);
+
 console.log(tomato);
